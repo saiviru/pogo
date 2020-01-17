@@ -1,0 +1,157 @@
+
+
+.clickable
+{
+  cursor: pointer;
+}
+a{
+  color: #341677;
+}
+a:hover{
+  text-decoration: none;
+  color:#000272;
+}
+.middle{
+  //margin: auto;
+  text-align: center;
+}
+.username,
+.password {
+  display: block !important;
+  width: 300px;
+  margin: 20px auto;
+}
+.fit-image{
+  //width: 100%;
+  object-fit: cover;
+  height: 75px; /* only if you want fixed height */
+}
+
+
+.grow {
+  display: inline-block;
+  transition-duration: 0.3s;
+  transition-property: transform;
+  -webkit-tap-highlight-color: transparent;
+  transform: translateZ(0);
+  box-shadow: 0 0 1px transparent;
+}
+.grow:hover {
+  transform: scale(1.1);
+}
+
+h1 {
+  font-size: 4.0vw;
+}
+h2 {
+  font-size: 3.0vh;
+}
+h3{
+  font-size: 3.0vh;
+}
+p {
+  font-size: 2vmin;
+}
+
+.wrapper {
+  margin: 2em auto 0em auto;
+  border-radius: 15px 50px;
+  max-width: 1000px;
+  background-color: red; /* For browsers that do not support gradients */
+  font-family: 'Manjari', sans-serif;
+  background-image: linear-gradient(to right top, #3d45ff, #3839e5, #312dcc, #2a21b3, #21159b);
+
+}
+.header {
+  padding: 30px 30px 0;
+  text-align: center;
+}
+.header1 {
+  padding: 10px 10px 0;
+  //text-align: center;
+  font-family: 'Livvic', sans-serif;
+}
+.header1__title {
+  margin: 10px 0;
+  //text-transform: uppercase;
+  //font-size: 2.5em;
+  font-weight: 500;
+  line-height: 1.1;
+  //color: white;
+}
+.header__title {
+  margin: 10px 0;
+  text-transform: uppercase;
+  //font-size: 2.5em;
+  font-weight: 500;
+  line-height: 1.1;
+  color: white;
+}
+.header__subtitle {
+  margin: 0;
+  font-size: 1.5em;
+  color: #949fb0;
+  font-family: 'Yesteryear', cursive;
+  font-weight: 500;
+  line-height: 1.1;
+}
+.body-title{
+  margin: 10px 0;
+}
+.number{
+  font-family: 'Livvic', sans-serif;
+  //background-color: white;
+  margin: 10px;
+}
+.cards {
+  padding: 15px;
+  margin: 15px;
+  display: flex;
+  flex-flow: row wrap;
+}
+.carded {
+  margin: 15px;
+  width: calc((100% / 4) - 30px);
+  transition: all 0.2s ease-in-out;
+background-image: linear-gradient(to right top, #fff97c, #e5e262, #cccc48, #b3b62c, #9aa102);
+}
+.left{
+
+}
+
+@media screen and (max-width: 991px) {
+  .carded {
+    width: calc((100% / 2) - 30px);
+    background-image: linear-gradient(to right top, #fff97c, #e5e262, #cccc48, #b3b62c, #9aa102);
+
+  }
+}
+@media screen and (max-width: 767px) {
+  .carded {
+    width: calc((100% / 2) - 30px);;
+    //margin: 10px;
+    //padding:  10px 20px;
+  }
+  .cards {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+  }
+  .body-title{
+    //margin: 15px 0 0 10px;
+  }
+  .fit-image{
+    //width: 100%;
+    object-fit: cover;
+    height: 50px; /* only if you want fixed height */
+  }
+  .wrapper{
+    margin: 1em 1em;
+  }
+  .modal-dialog{
+    //margin: 2rem;
+    margin-left: 1rem;
+    margin-right: 2rem;
+  }
+}
