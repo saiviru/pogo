@@ -40,59 +40,49 @@ $row=$results->fetch_array();
 
 ?>
 
-            <h1 align="center">Welcome to draft battles space</h1>
+            <h1 align="center">Welcome to the battle: </h1>
 
-            <div class="header1 text-center">
-                <!-- <h1 class="header1__title">Welcome Trainer, <b class="header__title"><?php echo $row['username']?></b> </h1> -->
-
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editModal">
-              Add a battle <i class="far fa-edit"></i>
-            </button>
+            <div id="dynamicCheck">
+                <input type="button" value="Add Trainer" onclick="createNewElement();" />
             </div>
-
-            <!-- modal code for edit -->
-            <div class="card-body modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div id="carouselExampleControls" class="carousel slide" data-interval="false" data-ride="carousel">
-                            <div class="carousel-inner">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="editModalLabel"></h5>
-                                    <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>-->
-                                </div>
-
-                                <div class="card">
-
-                                    <h5 class="card-header info-color white-text text-center py-4">
-                                        <strong>Add a Battle Name</strong>
-                                    </h5>
-
-                                    <!--Card content-->
-                                    <div class="card-body px-lg-5 pt-0">
-
-                                        <!-- Form -->
-                                        <?php include('addBattle.php'); ?>
-                                        <!-- Form -->
-
-                                    </div>
-                                </div>
-                            </div>
-
-
-                        </div>
-                        <!-- Material form login -->
-                    </div>
-                </div>
-
+            <div class="form-row">
+              <div class="col-md-4 text-center">
+              <input type="email" class="form-control" id="inputEmail4" placeholder="">
             </div>
-
-            <div id="my-div">
-                <a href="addPlayers.php" class="fill-div">Battles</a>
-            </div>
-            <!-- end of Edit modal code-->
-
+      </div>
+            <br>
+    
+            <script type="text/JavaScript">
+            var a=true;
+              function createNewElement() {
+                  // First create a DIV element.
+                
+                var txtNewInputBox = document.createElement('div');
+                var x=document.getElementById("newElementId");
+              
+                  // Then add the content (a new input box) of the element.
+                txtNewInputBox.innerHTML = "<input type='text' id='user-name'>";
+              
+                  // Finally put it where it is supposed to appear.
+    
+                if(a)
+                   {
+                     x.appendChild(txtNewInputBox);
+                     console.log("new id: ",x);
+                     a=false;
+                    }
+                else
+                {
+                  console.log("new id: ",x);
+                  x.removeChild(x.childNodes[1]);
+                  
+                  console.log("a: "+ a);
+                  a=true;
+    
+                }
+                
+              }
+              </script>
 
 
             <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
