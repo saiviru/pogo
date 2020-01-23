@@ -1,0 +1,45 @@
+// to clone an existing repository to a local machine
+
+$ git clone .gitURL
+
+// navigate to desired location and update the files
+
+$ git remote add upstream .gitURL
+
+// update the local files from master repository
+
+$ git pull upstream master
+
+//check the status of the repositor
+
+$ git status
+
+//git create new branch
+
+//check if the local os upto date with the master branch
+
+$ git pull
+
+//Create the branch on your local machine and switch in this branch :
+
+$ git checkout -b [name_of_your_new_branch]
+
+//Push the branch on github :
+
+$ git push origin [name_of_your_new_branch]
+
+//check all branches created 
+
+$ git branch -a
+
+//Add a new remote for your branch :
+
+$ git remote add [name_of_your_remote] [name_of_your_new_branch]
+
+//Push changes from your commit into your branch :
+
+$ git push [name_of_your_new_remote] [url]
+
+//Edit files, add and commit. Then push with the -u (short for --set-upstream) option:
+
+git push -u origin <branch>
